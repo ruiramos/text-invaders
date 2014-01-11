@@ -404,7 +404,7 @@ function restart() {
 
 function victory() {
 	game = 2;
-	//showVideo();
+	showVideo();
 	gameTime = ((new Date()) - gameStart) / 1000;
 
 	// stops the text movement
