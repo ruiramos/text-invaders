@@ -52,8 +52,6 @@ var validateRank = function(req, res, next){
 					client.hget([gameId+':ping', 'time'], function(err, ping){
 						var pingTs = ping; 
 
-						console.log(startTs, pingTs, parseInt(pingTs) - parseInt(startTs), gameTime*1000)
-
 						if(!startTs || !pingTs ||
 								parseInt(pingTs) - parseInt(startTs) > (gameTime*1000)){
 							res.send(500);
