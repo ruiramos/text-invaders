@@ -4,7 +4,6 @@
   "devDependencies": {
     "grunt": "~0.4.2",
     "express": "3.x",
-    "mongojs": "~0.9.11",
     "grunt-express-server": "~0.4.11",
     "grunt-contrib-watch": "~0.5.3",
     "JSONStream": "~0.7.1",
