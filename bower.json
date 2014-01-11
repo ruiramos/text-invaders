@@ -1,0 +1,18 @@
+{
+  "name": "ruiramos",
+  "version": "0.1.0",
+  "authors": [
+    "Rui Ramos <ruiramos@gmail.com>"
+  ],
+  "description": "Text Invaders",
+  "main": "index.html",
+  "license": "MIT",
+  "homepage": "ruiramos.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

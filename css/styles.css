@@ -1,0 +1,240 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+@font-face {
+  font-family: smallpixel;
+  src: url('/fonts/small_pixel.woff');
+}
+body {
+  font-size: 80%;
+  font-family: 'Arvo', 'Podkova';
+  overflow: hidden;
+}
+.invisible {
+  color: black;
+}
+.shot {
+  position: absolute;
+  width: 4px;
+  height: 16px;
+  background: white;
+}
+.ishot {
+  position: absolute;
+  font-size: 1.6em;
+  color: white;
+  z-index: 5;
+  animation: fadetowhite 1s linear 0s 1;
+  -moz-animation: fadetowhite 1s linear 0s 1;
+  -webkit-animation: fadetowhite 1s linear 0s 1;
+  -o-animation: fadetowhite 1s linear 0s 1;
+}
+#text {
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  color: #333;
+  width: 650px;
+  font-size: 1.6em;
+  line-height: 1.5em;
+}
+#text h1 {
+  display: inline;
+  color: black;
+  font-size: 1em;
+}
+#pad {
+  width: 54px;
+  height: 30px;
+  position: absolute;
+  bottom: 34px;
+  left: 100px;
+  background: url('/images/ship.png') no-repeat 0 0;
+}
+#vid {
+  position: absolute;
+  left: 0;
+  top: 0;
+  /*
+  margin-top:-320px;
+  margin-left:-240px;
+  */
+}
+#game-controls {
+  font-family: smallpixel;
+  -webkit-font-smoothing: none;
+  font-weight: normal;
+  color: white;
+  font-size: 14px;
+}
+#game-controls #score-container {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+#game-controls #lifes-container {
+  position: absolute;
+  width: 87px;
+  height: 30px;
+  top: 20px;
+  right: 130px;
+  background: url('/images/lifes.png') no-repeat 0 0;
+}
+#game-controls #lifes-container #lifes,
+#game-controls #score-container #score {
+  color: #00ff00;
+}
+#game-controls #instructions-container {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  margin-left: -235px;
+  color: #666;
+}
+#final-score {
+  background: rgba(0, 0, 0, 0.85);
+  width: 700px;
+  margin: 0px auto;
+  position: absolute;
+  top: 42.5%;
+  margin-top: 0;
+  left: 50%;
+  margin-left: -350px;
+  padding: 20px;
+}
+#final-score h2 {
+  font-family: smallpixel;
+  -webkit-font-smoothing: none;
+  font-size: 3em;
+  font-weight: normal;
+  padding: 10px 0;
+  color: #00ff00;
+  text-align: center;
+}
+#final-score .time {
+  font-family: smallpixel;
+  -webkit-font-smoothing: none;
+  font-weight: normal;
+  font-size: 16px;
+  color: white;
+  margin: 0 0 30px;
+  text-align: center;
+}
+#final-score table {
+  font-family: smallpixel;
+  -webkit-font-smoothing: none;
+  font-weight: normal;
+  width: 100%;
+  color: white;
+  font-size: 16px;
+}
+#final-score table tr th {
+  color: red;
+  font-weight: normal;
+}
+#final-score table tr td {
+  padding: 5px;
+  line-height: 33px;
+  text-align: center;
+}
+#final-score table tr td[data-bind-prop="rank"],
+#final-score table tr td[data-bind-prop="time"] {
+  width: 15%;
+}
+#final-score table tr td[data-bind-prop="name"] {
+  width: 70%;
+}
+#final-score table tr td[data-bind-prop="name"] input {
+  width: 97%;
+  padding: 4px 1%;
+  font-family: smallpixel;
+  -webkit-font-smoothing: none;
+  font-weight: normal;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  background: black;
+  border: 1px solid #aaa;
+}
+#final-score table tr.actual td {
+  background: #1a1a1a;
+}
+#final-score .share-score {
+  text-align: center;
+  margin: 20px 0 0;
+}
+footer {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  padding: 7px 0 3px;
+  z-index: 1000;
+  background: #ddd;
+  color: #666;
+  font-size: 0.9em;
+}
+footer p {
+  margin-left: 100px;
+  line-height: 20px;
+}
+footer a {
+  color: #333;
+}
+footer .like-button {
+  padding-right: 20px;
+  height: 25px;
+}
+.fadetoblack {
+  background: #000;
+  -webkit-transition: background-color 1s ease-in;
+  -moz-transition: background-color 1s ease-in;
+  -o-transition: background-color 1s ease-in;
+  transition: background-color 1s ease-in;
+}
+/* -- animations -- */
+@keyframes fadetowhite {
+  0% {
+    color: red;
+  }
+  100% {
+    color: white;
+  }
+}
+@-moz-keyframes fadetowhite {
+  0% {
+    color: red;
+  }
+  100% {
+    color: white;
+  }
+}
+@-webkit-keyframes fadetowhite {
+  0% {
+    color: red;
+  }
+  100% {
+    color: white;
+  }
+}
+@-o-keyframes fadetowhite {
+  0% {
+    color: red;
+  }
+  100% {
+    color: white;
+  }
+}
+.pixel-font {
+  font-family: smallpixel;
+  -webkit-font-smoothing: none;
+  font-weight: normal;
+}
+.pull-right {
+  float: right;
+}
+.pull-left {
+  float: left;
+}

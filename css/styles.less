@@ -1,0 +1,264 @@
+* {	
+  margin:0;
+  padding:0;
+}
+
+@bright-green: #00ff00;
+
+@font-face {
+  font-family: smallpixel;
+  src: url('/fonts/small_pixel.woff');
+}
+
+body {
+  font-size:80%;
+  font-family:'Arvo','Podkova';
+  overflow: hidden; 
+}
+
+.invisible{
+  color:black;
+}
+
+// player shots
+.shot {
+  position:absolute;  
+  width:4px;
+  height:16px; 
+  background:white;
+}
+
+// text shots (letters)
+.ishot {
+  position:absolute;  
+  font-size:1.6em;
+  color:white;
+  z-index:5;
+  animation: fadetowhite 1s linear 0s 1;
+  -moz-animation: fadetowhite 1s linear 0s 1; 
+  -webkit-animation: fadetowhite 1s linear 0s 1; 
+  -o-animation: fadetowhite 1s linear 0s 1; 
+}
+
+#text {
+  position:absolute;
+  top:100px;
+  left:100px;
+  color:#333;
+  width:650px;
+  font-size:1.6em;
+  line-height: 1.5em;
+
+  h1 {
+    display:inline;
+    color:black;
+    font-size:1em;
+  }
+}
+
+// ship
+#pad {
+  width:54px;
+  height:30px;
+  position:absolute;
+  bottom:34px;
+  left:100px;
+  background:url('/images/ship.png') no-repeat 0 0;
+}
+
+// victory video
+#vid {
+  position:absolute;
+  left:0;
+  top:0;
+  /*
+  margin-top:-320px;
+  margin-left:-240px;
+  */
+}
+
+// top row
+#game-controls {
+  .pixel-font;    
+  color:white;
+  font-size:14px;
+
+  #score-container {
+    position:absolute;
+    top:20px;
+    left:20px;
+  }
+
+  #lifes-container {
+    position:absolute;  
+    width:87px;
+    height:30px;
+    top:20px;
+    right:130px;
+    background:url('/images/lifes.png') no-repeat 0 0;
+  }
+
+  #lifes-container #lifes, 
+  #score-container #score {
+    color:@bright-green;
+  }
+
+  #instructions-container {
+    position:absolute;
+    top:20px;
+    left:50%;
+    margin-left:-235px;
+    color:#666;
+  }
+}
+
+// final popup with the rank and highscores
+#final-score {
+  background: rgba(0,0,0,0.85);
+  width: 700px;
+  margin: 0px auto;
+  position: absolute;
+  top: 42.5%;
+  margin-top: 0;
+  left: 50%;
+  margin-left: -350px;	
+  padding: 20px;
+
+  h2 {
+    .pixel-font;
+    font-size:3em;
+    font-weight: normal;
+    padding:10px 0;
+    color: @bright-green;
+    text-align: center; 
+  }
+
+  .time {
+    .pixel-font;
+    font-size:16px;
+    color: white;
+    margin:0 0 30px;
+    text-align: center;    
+  }
+
+  table {
+    .pixel-font;
+    width: 100%;
+    color: white;
+    font-size: 16px;
+
+    tr {  
+      th {
+        color:red;
+        font-weight: normal;
+      }
+
+      td {
+        padding:5px;
+        line-height: 33px;
+        text-align: center;
+
+        &[data-bind-prop="rank"],
+        &[data-bind-prop="time"] {
+          width: 15%;
+        }
+        &[data-bind-prop="name"] {
+          width: 70%;
+          input {
+            width: 97%;
+            padding:4px 1%;
+
+            .pixel-font;
+            font-size: 16px; 
+            color:white;
+            text-align: center;
+
+            background:black;            
+            border:1px solid #aaa;
+          }
+        }  
+
+      }
+      &.actual td {
+        background: #1a1a1a;
+      }
+    }
+  }
+
+  .share-score {
+    text-align: center;
+    margin:20px 0 0;
+  }
+}
+
+// contacts, etc.
+footer {
+  position: absolute;
+  width:100%;
+
+  bottom:0;
+  left:0;
+
+  margin:0;
+  padding:7px 0 3px;
+  z-index:1000;
+
+  background:#ddd;
+  color:#666;
+  font-size:0.9em;
+
+  p {
+    margin-left:100px;
+    line-height: 20px;    
+  }
+
+  a { 
+    color:#333;
+  }
+
+  .like-button {
+    padding-right: 20px;
+    height: 25px;
+  }
+}
+
+.fadetoblack { 
+	background: #000; 
+	-webkit-transition:background-color 1s ease-in; 
+	-moz-transition:background-color 1s ease-in;
+	-o-transition:background-color 1s ease-in;
+	transition:background-color 1s ease-in;
+}
+
+/* -- animations -- */
+@keyframes fadetowhite {
+  0%   {color: red;}
+  100%  {color: white;}
+}
+@-moz-keyframes fadetowhite{
+  0%   {color: red;}
+  100%  {color: white;}
+}
+@-webkit-keyframes fadetowhite{
+  0%   {color: red;}
+  100%  {color: white;}
+}
+@-o-keyframes fadetowhite {
+  0%   {color: red;}
+  100%  {color: white;}
+}
+
+// mixins
+.pixel-font {
+  font-family: smallpixel;
+  -webkit-font-smoothing: none;
+  font-weight: normal;
+}
+.pull-right {
+  float:right
+}
+.pull-left {
+  float:left
+}
+
+
