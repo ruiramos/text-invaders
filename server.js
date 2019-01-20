@@ -3,7 +3,9 @@ var express = require('express'),
 		JSONStream = require('JSONStream'),
 		base32 = require('base32'),
 		app = express(),
-		client = redis.createClient(),
+    client = redis.createClient({
+      host: process.env.REDIS_HOST || 'localhost'
+    }),
 		thisPlayerId;
 
 app.set('port', 3000);
