@@ -524,7 +524,8 @@ function randomPropertyInObject(object) {
 function showVideo() {
   var params = { allowScriptAccess: "always" };
   var atts = { id: "vid" };
-  swfobject.embedSWF("http://www.youtube.com/v/3GwjfUFyY6M?controls=0&showinfo=0&enablejsapi=1&playerapiid=ytplayer&version=3", "vid", "100%", "100%", "9", null, null, params, atts);
+  $('#vid').html('<iframe width="100%" height="100%" src="https://www.youtube.com/embed/3GwjfUFyY6M?autoplay=1&start=18" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen autoplay="1"  allow="autoplay; encrypted-media"></iframe>');
+ // swfobject.embedSWF("http://www.youtube.com/v/3GwjfUFyY6M?controls=0&showinfo=0&enablejsapi=1&playerapiid=ytplayer&version=3", "vid", "100%", "100%", "9", null, null, params, atts);
 
 }
 
