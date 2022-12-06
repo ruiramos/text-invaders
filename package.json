@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "devDependencies": {
     "grunt": "~0.4.2",
-    "express": "3.x",
+    "express": "4.x",
     "grunt-express-server": "~0.4.11",
     "grunt-contrib-watch": "~0.5.3",
     "JSONStream": "~0.7.1",
