@@ -9,7 +9,7 @@ var express = require('express'),
 		thisPlayerId;
 
 app.set('port', 3000);
-app.use(express.static(__dirname));
+app.use(express.static('public'));
 app.use(express.urlencoded());
 app.use(express.json());
 
