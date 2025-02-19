@@ -4,9 +4,9 @@ COPY . /app
 WORKDIR /app
 RUN npm install
 
-CMD cp application public/ 
+CMD cp application.js public/ 
 CMD mkdir public/css && cp css/styles.css public/css/
-CMD mv sounds public/
-CMD mv images public/
+CMD cp -r sounds public/
+CMD cp -r images public/
 
 CMD ["node","server.js"]
